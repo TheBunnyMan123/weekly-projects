@@ -15,20 +15,22 @@
                 </div>
             </div>
         </noscript>
-        <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 100 100"
-            fill="none" id="retry-button">
-            <path stroke-width="5px" stroke="#000000" stroke-linecap="round"
-                d="M20 50 A30 30 0 1 0 50 20" />
-            <g transform="rotate(9.5 50 20)">
+        <div id="play-area">
+            <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 100 100"
+                fill="none" id="retry-button">
                 <path stroke-width="5px" stroke="#000000" stroke-linecap="round"
-                    d="M60 10 L50 20 L60 30" />
-            </g>
-        </svg>
-        <div class="circle" id="play-area">
-            <div class="play-segment" id="segment-1"></div>
-            <div class="play-segment" id="segment-2"></div>
-            <div class="play-segment" id="segment-3"></div>
-            <div class="play-segment" id="target"></div>
+                    d="M20 50 A30 30 0 1 0 50 20" />
+                <g transform="rotate(9.5 50 20)">
+                    <path stroke-width="5px" stroke="#000000" stroke-linecap="round"
+                        d="M60 10 L50 20 L60 30" />
+                </g>
+            </svg>
+            <div class="circle">
+                <div class="play-segment" id="segment-1"></div>
+                <div class="play-segment" id="segment-2"></div>
+                <div class="play-segment" id="segment-3"></div>
+                <div class="play-segment" id="target"></div>
+            </div>
         </div>
         <div id="attempts">
             <div class="attempt" id="attempt-1">

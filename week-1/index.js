@@ -130,8 +130,13 @@ function new_target() {
 
     document.querySelectorAll("#attempts .color").forEach(element => {
         element.style.background = default_color;
-        element.style.borderColor = "transparent";
+        element.style.outlineColor = "#000000";
     });
+
+    document.querySelectorAll("#attempts .attempt-result").forEach(element => {
+        element.style.outlineColor = default_color;
+    });
+
 
     document.querySelectorAll(".attempt-result span").forEach(element => {
         element.innerText = "N/A";
@@ -208,8 +213,10 @@ window.addEventListener("load", () => {
         const target_mixed = mix_colors(target[0], target[1], target[2]);
 
         let result = document.querySelector(`#attempt-${attempt} .attempt-result`);
-        result.style.background = mix_colors_to_string(current[0], current[1], current[2]);
-        
+        const mixed_str = mix_colors_to_string(current[0], current[1], current[2]);
+        result.style.background = mixed_str;
+        result.style.outlineColor = mixed_str;
+
         let result_text = result.querySelector("span");
         result_text.style.color = get_readable_text_color(current_mixed);
         console.log(result.style.color);
@@ -221,11 +228,11 @@ window.addEventListener("load", () => {
         result_text.innerText = `${Math.abs(100 - average * 100).toFixed(1)}%`;
 
         document.querySelector(`#attempt-${attempt} .color-1`)
-            .style.borderColor = get_color(current[0], target, 0);
+            .style.outlineColor = get_color(current[0], target, 0);
         document.querySelector(`#attempt-${attempt} .color-2`)
-            .style.borderColor = get_color(current[1], target, 1);
+            .style.outlineColor = get_color(current[1], target, 1);
         document.querySelector(`#attempt-${attempt} .color-3`)
-            .style.borderColor = get_color(current[2], target, 2);
+            .style.outlineColor = get_color(current[2], target, 2);
         
         if (Math.ceil(average) == 0) {
             current = target;

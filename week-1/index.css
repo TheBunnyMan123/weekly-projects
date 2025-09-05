@@ -25,12 +25,11 @@
 
 
 #retry-button {
-    position: fixed;
+    position: absolute;
     width: 4vh;
     height: 4vh;
-    top: 2.25vh;
-    left: 50%;
-    transform: translateX(-50%) translateX(-13vh);
+    top: 0;
+    left: 0;
     background: #b0b1b0;
     border-radius: 25%;
     cursor: pointer;
@@ -41,12 +40,7 @@
 #play-area {
     width: 29vh;
     height: 29vh;
-
-    left: 50%;
-    top: 2.25vh;
-    transform: translateX(-50%);
-
-    position: fixed;
+    position: relative;
 }
 
 .play-segment {
@@ -79,13 +73,9 @@
 
 
 #attempts {
-    position: fixed;
     display: flex;
     flex-direction: column;
-
-    top: 34vh;
-    left: 50%;
-    transform: translateX(-50%);
+    margin: 1.25vh;
 }
 
 .attempt {
@@ -97,17 +87,21 @@
     background: #b0b1b0;
 }
 
-.attempt-result {
+#attempts .attempt-result {
     background: #b0b1b0;
     display: flex;
     align-items: center;
     justify-content: center;
-    outline: none !important;
+    outline-width: 1.3vh;
+    outline-color: #b0b1b0;
+    outline-offset: -0.2vh;
+    clip-path: none;
 }
 
 .attempt-result span {
     font-size: 1.8vh;
     font-weight: 600;
+    z-index: 10;
 }
 
 
@@ -115,11 +109,6 @@
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
-
-    position: fixed;
-    left: 50%;
-    bottom: 1.5vh;
-    transform: translateX(-50%);
 }
 
 #colors .color {
@@ -139,16 +128,17 @@
 }
 
 .color {
-    width: 4.8vh;
-    height: 4.8vh;
-    margin: 0.75vh;
-    outline: 0.5vh solid black;
+    width: 4.5vh;
+    height: 4.5vh;
+    margin: 1vh;
+    outline: 0.75vh solid black;
 }
 
 .attempt .color {
-    WIDTH: 5.2vh;
-    HEIGHT: 5.2vh;
-    border: 0.75vh solid transparent;
+    margin: 1.65vh;
+    outline-offset: 0.75vh;
+    width: 5vh;
+    height: 5vh;
 }
 
 .roundSquare {
@@ -163,7 +153,18 @@
 }
 
 body {
-    overflow: none;
+    position: fixed;
+    padding: none;
+    margin: none;
+    width: 100vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
 }
 
 * {
