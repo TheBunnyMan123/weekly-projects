@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css">
+        <script src="index.js"></script>
+        <title>Color Mixing Game</title>
+    </head>
+    <body>
+        <noscript>
+            <div id="dialog">
+                <div id="dialog-content">
+                    This page requires javascript! Please enable it.
+                </div>
+            </div>
+        </noscript>
+        <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 100 100"
+            fill="none" id="retry-button">
+            <path stroke-width="5px" stroke="#000000" stroke-linecap="round"
+                d="M20 50 A30 30 0 1 0 50 20" />
+            <g transform="rotate(9.5 50 20)">
+                <path stroke-width="5px" stroke="#000000" stroke-linecap="round"
+                    d="M60 10 L50 20 L60 30" />
+            </g>
+        </svg>
+        <div class="circle" id="play-area">
+            <div class="play-segment" id="segment-1"></div>
+            <div class="play-segment" id="segment-2"></div>
+            <div class="play-segment" id="segment-3"></div>
+            <div class="play-segment" id="target"></div>
+        </div>
+        <div id="attempts">
+            <div class="attempt" id="attempt-1">
+                <div class="roundSquare color-1 color"></div>
+                <div class="roundSquare color-2 color"></div>
+                <div class="roundSquare color-3 color"></div>
+                <div class="circle color attempt-result"><span>N/A</span></div>
+            </div>
+            <div class="attempt" id="attempt-2">
+                <div class="roundSquare color-1 color"></div>
+                <div class="roundSquare color-2 color"></div>
+                <div class="roundSquare color-3 color"></div>
+                <div class="circle color attempt-result"><span>N/A</span></div>
+            </div>
+            <div class="attempt" id="attempt-3">
+                <div class="roundSquare color-1 color"></div>
+                <div class="roundSquare color-2 color"></div>
+                <div class="roundSquare color-3 color"></div>
+                <div class="circle color attempt-result"><span>N/A</span></div>
+            </div>
+            <div class="attempt" id="attempt-4">
+                <div class="roundSquare color-1 color"></div>
+                <div class="roundSquare color-2 color"></div>
+                <div class="roundSquare color-3 color"></div>
+                <div class="circle color attempt-result"><span>N/A</span></div>
+            </div>
+            <div class="attempt" id="attempt-5">
+                <div class="roundSquare color-1 color"></div>
+                <div class="roundSquare color-2 color"></div>
+                <div class="roundSquare color-3 color"></div>
+                <div class="circle color attempt-result"><span>N/A</span></div>
+            </div>
+            <div class="attempt" id="attempt-6">
+                <div class="roundSquare color-1 color"></div>
+                <div class="roundSquare color-2 color"></div>
+                <div class="roundSquare color-3 color"></div>
+                <div class="circle color attempt-result"><span>N/A</span></div>
+            </div>
+        </div>
+        <div id="colors">
+            <div id="colors-top">
+                <div class="color roundSquare" id="color-top-1"></div>
+                <div class="color roundSquare" id="color-top-2"></div>
+                <div class="color roundSquare" id="color-top-3"></div>
+                <div class="color roundSquare" id="color-top-4"></div>
+                <div class="color roundSquare" id="color-top-5"></div>
+                <div class="color roundSquare" id="color-top-6"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400"
+                    viewBox="0 0 120 120" fill="none" class="color roundSquare" id="remove-color">
+                    <path stroke="#000000" stroke-width="5px" stroke-linecap="round"
+                        d="M20 60 L45 35 H100 V85 H45 L20 60
+                            M57.5 47.5 L87.5 72.5 M87.5 47.5 L57.5 72.5" />
+                </svg>
+            </div>
+            <div id="colors-bottom">
+                <div class="color roundSquare" id="color-bottom-1"></div>
+                <div class="color roundSquare" id="color-bottom-2"></div>
+                <div class="color roundSquare" id="color-bottom-3"></div>
+                <div class="color roundSquare" id="color-bottom-4"></div>
+                <div class="color roundSquare" id="color-bottom-5"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400"
+                    viewBox="0 0 120 120" fill="none" class="color roundSquare" id="finalize-attempt">
+                    <path stroke="#000000" stroke-width="5px" stroke-linecap="round"
+                        d="M90 30 V85 H30 M30 85 L45 70 M30 85 L45 100" />
+                </svg>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,171 @@
+@font-face {
+    font-family: 'Leroy Lettering';
+    src: url('LeroyLetteringLightBeta01.woff2') format('woff2');
+}
+
+#dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #000000a0;
+    z-index: 99999999;
+}
+
+#dialog-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 5vh;
+    background: #ffffff;
+}
+
+
+#retry-button {
+    position: fixed;
+    width: 4vh;
+    height: 4vh;
+    top: 2.25vh;
+    left: 50%;
+    transform: translateX(-50%) translateX(-13vh);
+    background: #b0b1b0;
+    border-radius: 25%;
+    cursor: pointer;
+    outline: 0.35vh solid black;
+}
+
+
+#play-area {
+    width: 29vh;
+    height: 29vh;
+
+    left: 50%;
+    top: 2.25vh;
+    transform: translateX(-50%);
+
+    position: fixed;
+}
+
+.play-segment {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#segment-1 {
+    clip-path: polygon(0% 0%, 0% 48.5%, 48.5% 48.5%, 48.5% 0%);
+    background: #b0b1b0;
+}
+
+#segment-2 {
+    clip-path: polygon(48.5% 51.5%, -10% 51.5%, 11.2% 98%);
+    background: #b0b1b0;
+}
+
+#segment-3 {
+    clip-path: polygon(48.5% 56%, 17.1% 96%, 48.5% 110%);
+    background: #b0b1b0;
+}
+
+#target {
+    clip-path: polygon(51.5% 0%, 100% 0%, 100% 100%, 51.5% 100%);
+    background: #b0b1b0
+}
+
+
+#attempts {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+
+    top: 34vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.attempt {
+    display: flex;
+    flex-direction: row;
+}
+
+.attempt .color {
+    background: #b0b1b0;
+}
+
+.attempt-result {
+    background: #b0b1b0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none !important;
+}
+
+.attempt-result span {
+    font-size: 1.8vh;
+    font-weight: 600;
+}
+
+
+#colors {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+
+    position: fixed;
+    left: 50%;
+    bottom: 1.5vh;
+    transform: translateX(-50%);
+}
+
+#colors .color {
+    cursor: pointer;
+}
+
+#colors-top, #colors-bottom {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#remove-color, #finalize-attempt {
+    background: #b0b1b0;
+}
+
+.color {
+    width: 4.8vh;
+    height: 4.8vh;
+    margin: 0.75vh;
+    outline: 0.5vh solid black;
+}
+
+.attempt .color {
+    WIDTH: 5.2vh;
+    HEIGHT: 5.2vh;
+    border: 0.75vh solid transparent;
+}
+
+.roundSquare {
+    border-radius: 25%;
+    aspect-ratio: 1;
+}
+
+.circle {
+    clip-path: circle(50% at 50% 50%);
+    border-radius: 999999px;
+    aspect-ratio: 1;
+}
+
+body {
+    overflow: none;
+}
+
+* {
+    font-family: 'Leroy Lettering';
+}
