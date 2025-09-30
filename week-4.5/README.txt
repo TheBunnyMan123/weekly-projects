@@ -1,4 +1,4 @@
-(4.5 because my actual week 4 project failed and I Accidentally deleted it, so I made this instead during week 5)
+(4.5 because my actual week 4 project failed and I accidentally deleted it, so I made this instead during week 5)
 
 TimeCalc - Time Unit Conversion for the TI-84 Plus CE/CSE
 
